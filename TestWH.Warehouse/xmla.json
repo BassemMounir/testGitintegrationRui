@@ -128,6 +128,45 @@
             "value": "False"
           }
         ]
+      },
+      {
+        "name": "view2",
+        "sourceLineageTag": "[dbo].[view2]",
+        "columns": [
+          {
+            "name": "A",
+            "dataType": "int64",
+            "sourceColumn": "A",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "A",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "view2",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
       }
     ],
     "expressions": [
