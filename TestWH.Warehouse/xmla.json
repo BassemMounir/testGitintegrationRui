@@ -13,6 +13,114 @@
     "sourceQueryCulture": "en-US",
     "tables": [
       {
+        "name": "schema1.table1",
+        "sourceLineageTag": "[schema1].[table1]",
+        "columns": [
+          {
+            "name": "col1",
+            "dataType": "int64",
+            "sourceColumn": "col1",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col1",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "col2",
+            "dataType": "int64",
+            "sourceColumn": "col2",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col2",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "table1",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "schema1"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "schema1.table2",
+        "sourceLineageTag": "[schema1].[table2]",
+        "columns": [
+          {
+            "name": "col1",
+            "dataType": "int64",
+            "sourceColumn": "col1",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col1",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "col2",
+            "dataType": "int64",
+            "sourceColumn": "col2",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col2",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "table2",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "schema1"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
         "name": "table1",
         "sourceLineageTag": "[dbo].[table1]",
         "columns": [
@@ -80,6 +188,60 @@
               "entityName": "table2",
               "expressionSource": "DatabaseQuery",
               "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "table3",
+        "sourceLineageTag": "[schema1].[table3]",
+        "columns": [
+          {
+            "name": "col1",
+            "dataType": "int64",
+            "sourceColumn": "col1",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col1",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "col2",
+            "dataType": "int64",
+            "sourceColumn": "col2",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "col2",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "table3",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "schema1"
             }
           }
         ],
